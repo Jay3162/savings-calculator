@@ -10,6 +10,13 @@ const monthly = document.getElementById("monthly");
 const duration = document.getElementById("duration");
 const rate = document.getElementById("rate");
 
+const gbpFormatter = new Intl.NumberFormat('en-GB', {
+    style: 'currency',
+    currency: 'GBP',
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+});
+
 function calculateGrowth(lumpSum, monthlySaving, durationYears, annualRate) {
     // 1. Convert annual inputs to monthly periods
     const monthlyRate = (annualRate / 100) / 12;
@@ -53,6 +60,6 @@ calInputs.forEach((fieldInput) => {
 calCta.addEventListener("submit", (e) => {
     e.preventDefault();
     resultTitle.innerHTML = `In ${monthly.value} years your savings will be worth:`
-    resultValue.innerHTML = `£${calculateGrowth(lumpSum.value, monthly.value, duration.value, rate.value)}`
+    resultValue.innerHTML = `${gbpFormatter.format(calculateGrowth(lumpSum.value, monthly.value, duration.value, rate.value))}`
     document.querySelector(".cal-result").style.display = "flex";
 });
