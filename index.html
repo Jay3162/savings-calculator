@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta viewport="initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/styles.css">
+    </head>
+    <body>
+        <main>
+            <form class="cal-wrapper">
+                <div class="cal-header">
+                    <div class="cal-header-text">
+                        <div class="cal-title">
+                            <h1>Savings Calculator</h1>
+                        </div>
+                        <div class="cal-subtitle">
+                            <h2>Work out how a lump sum or regular monthly savings would grow</h2>
+                        </div>
+                    </div>
+                    <img class="cal-img" src="/assets/_Layer_.png"/>
+                </div>
+                <div class="cal-field-wrapper">
+                    <div class="cal-field">
+                        <label class="field-title">Lump Sum</label>
+                        <input class="field-input" placeholder="£" id="lump-sum"/>
+                    </div>
+                    <div class="cal-field" id="special">
+                        <label class="field-title" id="">And / or</label>
+                        <div class="cal-divider"></div>
+                    </div>
+                     <div class="cal-field">
+                        <label class="field-title">Monthly saving</label>
+                        <input class="field-input" placeholder="£" id="monthly"/>
+                    </div>
+                     <div class="cal-field">
+                        <label class="field-title">Duration</label>
+                        <input class="field-input" placeholder="Years" id="duration"/>
+                    </div>
+                     <div class="cal-field">
+                        <label class="field-title">Annual interest rate</label>
+                        <input class="field-input" placeholder="%" id="rate"/>
+                    </div>
+                </div>
+                <div class="cal-cta-wrapper">
+                    <button class="cal-cta" type="submit" disabled>Calculate</button>
+                </div>
+                <div class="cal-result">
+                    <div class="cal-result-text">
+                        <p class="cal-result-title">foo</p>
+                        <p class="cal-result-rate">bar</p>
+                    </div>
+                </div>
+                <div class="cal-footer">
+                    <div class="cal-footer-text">
+                        <div class="cal-title">
+                            <h3>Check the best savings rates →</h3>
+                        </div>
+                        <div class="cal-subtitle">
+                            <h4>Work out how a lump sum or regular monthly savings would grow</h4>
+                        </div>
+                    </div>
+                    <div></div>
+                    <img class="cal-img" src="/assets/_Layer_ (1).png"/>
+                </div>
+                
+            </form>
+        </main>
+        <script src="/calculator.js"></script>
+    </body>
+</html>
